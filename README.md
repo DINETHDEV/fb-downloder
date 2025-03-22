@@ -30,7 +30,7 @@ Developed by Omindu Dissanayake and Pasindu Maduwantha, the Facebook Video Downl
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/facebook-video-downloader.git
+   git clone https://github.com/OminduDissanayaka/facebook-video-downloader.git
    cd facebook-video-downloader
    ```
 
