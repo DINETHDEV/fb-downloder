@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Video Downloader</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1><i class="fab fa-facebook"></i> Facebook Video Downloader</h1>
+    </div>
+    
+    <div class="content">
+      <div class="input-group">
+        <input type="text" id="fbUrl" placeholder="Paste Facebook video URL here" />
+        <i class="fas fa-link"></i>
+      </div>
+      
+      <button class="download-btn" id="downloadBtn" onclick="downloadVideo()">
+        <i class="fas fa-download"></i> Download Video
+      </button>
+      
+      <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <p style="margin-top: 15px;">Fetching video information...</p>
+      </div>
+      
+      <div class="error-message" id="errorMessage">
+        <i class="fas fa-exclamation-circle"></i> 
+        <span id="errorText">Error fetching video. Please check the URL and try again.</span>
+      </div>
+      
+      <div class="result" id="result"></div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <div class="footer">
+    <p>Developed by <a href="https://github.com/OminduDissanayaka" title="Omindu Dissanayaka">Omindu Dissanayaka</a> and <a href="https://github.com/PasinduOG" title="Pasindu Maduwantha">Pasindu Maduwantha</a></p>
+    <p>&copy; 2025 All Rights Reserved</p>
+  </div>
+
+<script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+</body>
+</html>
