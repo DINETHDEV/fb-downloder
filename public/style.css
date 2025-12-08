@@ -1,0 +1,338 @@
+:root {
+    --primary: #4361ee;
+    --primary-hover: #3a56d4;
+    --secondary: #4cc9f0;
+    --dark: #292f36;
+    --light: #ffffff;
+    --gray-light: #f8f9fa;
+    --gray: #e9ecef;
+    --error: #ef476f;
+    --success: #06d6a0;
+    --border-radius: 12px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: var(--gray-light);
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 550px;
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+  
+  .header {
+    padding: 25px 30px;
+    background-color: var(--light);
+    border-bottom: 1px solid var(--gray);
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header h1 i {
+    color: var(--primary);
+  }
+  
+  .content {
+    padding: 30px;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    padding-left: 45px;
+    background-color: var(--gray-light);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--dark);
+    transition: var(--transition);
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: var(--light);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
+  }
+  
+  .input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+    font-size: 1.2rem;
+  }
+  
+  .input-group input:focus + i {
+    color: var(--primary);
+  }
+  
+  button.download-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  button.download-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.2);
+  }
+  
+  .result {
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+  }
+  
+  .result.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .result-card {
+    background-color: var(--gray-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .video-info {
+    padding: 20px;
+  }
+  
+  .video-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+  }
+  
+  .download-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .download-options a {
+    text-decoration: none;
+  }
+  
+  .quality-btn {
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .sd-btn {
+    background-color: var(--gray);
+    color: var(--dark);
+  }
+  
+  .sd-btn:hover {
+    background-color: #dde2e6;
+  }
+  
+  .hd-btn {
+    background-color: var(--secondary);
+    color: var(--light);
+  }
+  
+  .hd-btn:hover {
+    background-color: #3ab8dd;
+  }
+  
+  .loader {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .loader .spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .error-message {
+    color: var(--error);
+    background-color: rgba(239, 71, 111, 0.1);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .container {
+      border-radius: 0;
+    }
+    
+    .download-options {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Success animation */
+  .success-checkmark {
+    display: none;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .check-icon {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 4px solid var(--success);
+  }
+  
+  .check-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: rotate(-45deg);
+    transform-origin: 20% 65%;
+    width: 10%;
+    height: 25%;
+    background-color: var(--success);
+    animation: checkmark-first 0.4s ease forwards;
+  }
+  
+  .check-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: rotate(40deg);
+    transform-origin: 100% 100%;
+    width: 40%;
+    height: 10%;
+    background-color: var(--success);
+    animation: checkmark-second 0.4s ease forwards;
+  }
+  
+  @keyframes checkmark-first {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 10%;
+      height: 25%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes checkmark-second {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 40%;
+      height: 10%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+  }
+  
+  /* Footer styles */
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+  }
+  
+  .footer a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .footer a:hover {
+    color: var(--primary-hover);
+  }
