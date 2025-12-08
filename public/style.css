@@ -319,20 +319,35 @@
     20%, 40%, 60%, 80% { transform: translateX(5px); }
   }
   
-  /* Footer styles */
-  .footer {
-    margin-top: 20px;
-    text-align: center;
-    color: #6c757d;
-    font-size: 0.9rem;
-  }
-  
-  .footer a {
-    color: var(--primary);
-    text-decoration: none;
-    transition: var(--transition);
-  }
-  
-  .footer a:hover {
-    color: var(--primary-hover);
-  }
+ /* Footer Styling */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #333;
+  background: #1a1a1a;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer p {
+  margin: 5px 0;
+  line-height: 1.4;
+  text-transform: uppercase; /* ensures capital letters if missed */
+  font-weight: 500;
+}
+
+.footer p:first-child {
+  color: #fff; /* highlight the branding line */
+  font-weight: 600;
+}
+
+.footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer p a:hover {
+  text-decoration: underline;
+}
