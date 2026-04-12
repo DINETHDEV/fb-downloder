@@ -1,5 +1,5 @@
 {
-  "name": "fb-downloder v-1",
+  "name": "fb-downloder",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
