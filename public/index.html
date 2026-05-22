@@ -1,50 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facebook Video Downloader</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Download Facebook videos in HD and SD quality for free. Fast, free, and no watermark. Works with all public Facebook videos.">
+  <title>FB Downloader – Download Facebook Videos Free | HD &amp; SD Quality</title>
+  <link href= gi"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="container">
-    <div class="header">
-      <h1><i class="fab fa-facebook"></i> Facebook Video Downloader</h1>
-    </div>
-    
-    <div class="content">
-      <div class="input-group">
-        <input type="text" id="fbUrl" placeholder="Paste Facebook video URL here" />
-        <i class="fas fa-link"></i>
-      </div>
-      
-      <button class="download-btn" id="downloadBtn" onclick="downloadVideo()">
-        <i class="fas fa-download"></i> Download Video
-      </button>
-      
-      <div class="loader" id="loader">
-        <div class="spinner"></div>
-        <p style="margin-top: 15px;">Fetching video information...</p>
-      </div>
-      
-      <div class="error-message" id="errorMessage">
-        <i class="fas fa-exclamation-circle"></i> 
-        <span id="errorText">Error fetching video. Please check the URL and try again.</span>
-      </div>
-      
-      <div class="result" id="result"></div>
-    </div>
-  </div>
-  
-  <!-- Footer -->
-  <div class="footer">
-    <p>Developed by <a href="https://github.com/OminduDissanayaka" title="Omindu Dissanayaka">Omindu Dissanayaka</a> and <a href="https://github.com/PasinduOG" title="Pasindu Maduwantha">Pasindu Maduwantha</a></p>
-    <p>&copy; 2025 All Rights Reserved</p>
-  </div>
+  <!-- Animated Background Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
 
-<script src="script.js"></script>
+  <div class="page-wrapper">
+
+    <!-- Main Card -->
+    <div class="container glass-panel">
+      <div class="header">
+        <h1><i class="fab fa-facebook"></i> FB Downloader</h1>
+        <p class="subtitle">Download Facebook videos in HD &amp; SD quality — free &amp; fast</p>
+      </div>
+
+      <div class="content">
+        <div class="input-group">
+          <input type="text" id="fbUrl" placeholder="Paste Facebook video URL here..." />
+          <i class="fas fa-link"></i>
+          <div class="input-glow"></div>
+        </div>
+
+        <button class="download-btn" id="downloadBtn" onclick="downloadVideo()">
+          <span class="btn-content">
+            <i class="fas fa-cloud-download-alt"></i> Download Video
+          </span>
+          <div class="btn-glow"></div>
+        </button>
+
+        <div class="loader" id="loader">
+          <div class="modern-spinner">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <p class="loading-text">Fetching video info<span class="dots">...</span></p>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+          <div class="error-content">
+            <i class="fas fa-exclamation-triangle pulse-anim"></i>
+            <span id="errorText">Error fetching video. Please check the URL and try again.</span>
+          </div>
+        </div>
+
+        <div class="result" id="result"></div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="features-grid">
+        <div class="feature-card glass-panel">
+          <i class="fas fa-bolt feature-icon"></i>
+          <h3>Lightning Fast</h3>
+          <p>Download Facebook videos instantly without any delays or waiting time.</p>
+        </div>
+        <div class="feature-card glass-panel">
+          <i class="fas fa-shield-alt feature-icon"></i>
+          <h3>100% Free &amp; Safe</h3>
+          <p>No registration required. No hidden fees. Your privacy is fully protected.</p>
+        </div>
+        <div class="feature-card glass-panel">
+          <i class="fas fa-film feature-icon"></i>
+          <h3>HD &amp; SD Quality</h3>
+          <p>Choose between High Definition and Standard Definition based on your need.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="info-section glass-panel">
+      <h2><i class="fas fa-info-circle" style="color: #1877f2; margin-right: 10px;"></i>How to Download Facebook Videos</h2>
+      <p class="info-desc">
+        <strong>FB Downloader</strong> is a free online tool that lets you save any public Facebook video directly to your device in HD or SD quality — no app installation needed.
+      </p>
+
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <h4>Copy the Video Link</h4>
+            <p>Open Facebook, find the video you want, click the three dots (⋯) menu, and select <strong>"Copy link"</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <h4>Paste &amp; Click Download</h4>
+            <p>Paste the copied link into the input box above and click the <strong>Download Video</strong> button.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <h4>Choose Your Quality</h4>
+            <p>Select either <strong>HD</strong> (best quality) or <strong>SD</strong> (smaller file size) and save it to your device.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-note">
+        <i class="fas fa-circle-info"></i>
+        <p>This tool only works with <strong>public</strong> Facebook videos. Private or friend-only videos cannot be downloaded. Please respect content creators' copyright when using downloaded videos.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section glass-panel">
+      <h2><i class="fas fa-circle-question" style="color: #1877f2; margin-right: 10px;"></i>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <h4><i class="fas fa-chevron-right"></i> Is FB Downloader free to use?</h4>
+          <p>Yes! FB Downloader is completely free. No account, subscription, or credit card is required.</p>
+        </div>
+        <div class="faq-item">
+          <h4><i class="fas fa-chevron-right"></i> Can I download private Facebook videos?</h4>
+          <p>No. This tool only supports public videos. Private or restricted videos cannot be accessed.</p>
+        </div>
+        <div class="faq-item">
+          <h4><i class="fas fa-chevron-right"></i> What is the difference between HD and SD?</h4>
+          <p>HD (High Definition) offers the best picture quality but a larger file size. SD (Standard Definition) is smaller and loads faster on slower connections.</p>
+        </div>
+        <div class="faq-item">
+          <h4><i class="fas fa-chevron-right"></i> Does it work on mobile?</h4>
+          <p>Yes! FB Downloader is fully responsive and works perfectly on smartphones, tablets, and desktops.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Developed by
+        <a href="https://github.com/OminduDissanayaka" class="footer-link" title="Omindu Dissanayaka">Omindu Dissanayaka</a>
+        &amp;
+        <a href="https://github.com/PasinduOG" class="footer-link" title="Pasindu Maduwantha">Pasindu Maduwantha</a>
+      </p>
+      <p class="copyright">&copy; 2025 ALL RIGHTS RESERVED</p>
+    </div>
+
+  </div><!-- /page-wrapper -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
