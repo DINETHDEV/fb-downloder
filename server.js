@@ -83,7 +83,7 @@ app.get('/fbdown', async (req, res) => {
     } catch (scrapeErr) {
       const msg = scrapeErr.response?.status === 404
         ? 'Video not found or inaccessible (404). Make sure the URL is correct and the video is public.'
-        : scrapeErr.message.includes('login')
+        : (scrapeErr.message || '').includes('login')
           ? 'Facebook now requires login to access videos.'
           : scrapeErr.message;
       console.error('Both methods failed');

@@ -69,7 +69,8 @@ async function downloadVideo() {
     loaderElement.style.display = 'none';
     errorElement.style.display = 'block';
     const errData = error.response?.data;
-    const errMsg = errData?.details || errData?.error || error.message || 'Failed to fetch video data';
+    let errMsg = errData?.details || errData?.error || error.message || 'Failed to fetch video data';
+    if (typeof errMsg !== 'string') errMsg = JSON.stringify(errMsg);
     document.getElementById('errorText').textContent = 'Error: ' + errMsg;
     if (errData?.help) {
       const helpDiv = document.createElement('div');
