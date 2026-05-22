@@ -397,6 +397,22 @@ button.download-btn:disabled {
   line-height: 1.4;
 }
 
+.help-box {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.help-box strong {
+  color: #93c5fd;
+}
+
 .pulse-anim {
   animation: warn-pulse 2s infinite;
   color: var(--error);

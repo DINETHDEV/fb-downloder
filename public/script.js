@@ -68,7 +68,16 @@ async function downloadVideo() {
   } catch (error) {
     loaderElement.style.display = 'none';
     errorElement.style.display = 'block';
-    document.getElementById('errorText').textContent = 'Error: ' + (error.message || 'Failed to fetch video data');
+    const errData = error.response?.data;
+    const errMsg = errData?.details || errData?.error || error.message || 'Failed to fetch video data';
+    document.getElementById('errorText').textContent = 'Error: ' + errMsg;
+    if (errData?.help) {
+      const helpDiv = document.createElement('div');
+      helpDiv.className = 'help-box';
+      helpDiv.innerHTML = '<hr style="margin:12px 0;opacity:0.2"><strong>Need cookies?</strong><br>' +
+        errData.help.instructions.replace(/\n/g, '<br>');
+      document.getElementById('errorText').appendChild(helpDiv);
+    }
     downloadBtn.disabled = false;
     downloadBtn.innerHTML = '<span class="btn-content"><i class="fas fa-cloud-download-alt"></i> Download Video</span><div class="btn-glow"></div>';
   }

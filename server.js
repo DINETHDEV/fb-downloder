@@ -12,18 +12,6 @@ app.use(express.static(__dirname + '/public'));
 const PY_SCRIPT = path.join(__dirname, 'fb_download.py');
 const COOKIES_FILE = path.join(__dirname, 'cookies.txt');
 
-function getYtDlpPath() {
-  const candidates = [
-    'C:\\Users\\dinet\\AppData\\Roaming\\Python\\Python314\\Scripts\\yt-dlp.exe',
-    'yt-dlp',
-    'yt-dlp.exe',
-  ];
-  for (const c of candidates) {
-    try { if (fs.existsSync(c) || c === 'yt-dlp' || c === 'yt-dlp.exe') return c; } catch (_) {}
-  }
-  return 'yt-dlp';
-}
-
 async function fetchViaYtDlp(url) {
   return new Promise((resolve, reject) => {
     const args = ['fb_download.py', url];
