@@ -1,90 +1,44 @@
-# Facebook Video Downloader
 
-A simple, user-friendly web tool to download Facebook videos effortlessly.
+<div align="center">
+  <h1>🌌 FB Downloader</h1>
+  <p>A fast, sleek, and modern web application to download Facebook videos directly to your device in stunning quality.</p>
 
-## 📋 Overview
-
-Developed by GridX Dev 7, the Facebook Video Downloader allows users to save Facebook videos with just a few clicks. By simply entering a Facebook video URL, users can instantly access download links for videos in various quality options.
-
-## ✨ Key Features
-
-- **Simple Interface**: Clean, intuitive design for easy navigation
-- **Multiple Quality Options**: Download videos in various resolutions
-- **Fast Processing**: Quick video link extraction
-- **Secure Downloads**: No personal data collection or tracking
-- **Open Source**: Freely available for contributions and enhancements
-
-## 🛠️ Technologies
-
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v14.0 or higher)
-- npm (v6.0 or higher)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/DINETHDEV/fb-downloder.git
-   cd fb-downloder
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the server:
-   ```bash
-   npm start
-   ```
-
-4. Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
-
-## 📝 Usage
-
-1. Copy the URL of the Facebook video you want to download
-2. Paste the URL into the input field on the home page
-3. Click the "Download" button
-4. Select your preferred video quality from the options provided
-5. Click on the download link to save the video to your device
-
-## 🤝 Contributing
-
-We welcome contributions to improve the Facebook Video Downloader! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin new-feature`
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Thanks to all contributors who participate in this project
-- Special thanks to the open-source community for their valuable resources
-- Original concept by Omindu Dissanayake and Pasindu Maduwantha
-
-## ⚠️ Disclaimer
-
-This tool is designed for personal use only. Please respect copyright laws and the terms of service of Facebook when downloading videos. Always ensure you have the right to download and use the videos you're accessing through this tool.
-
-## 📞 Contact
-
-- GridX Dev 7 - [GitHub](https://github.com/DINETHDEV)
+  [![Launch Site](https://img.shields.io/badge/🚀_LAUNCH_SITE-0058CC?style=for-the-badge&logo=rocket&logoColor=white)](https://fb-downloder-1.onrender.com)
+  [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](#)
+  [![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)](#)
+</div>
 
 ---
 
-Made with ❤️ by GridX Dev 7
+## ⚠️ Important Notice
+
+**© 2026 GridX Dev Studio. All Rights Reserved.**
+
+> **DO NOT COPY, CLONE, OR REDISTRIBUTE THIS CODE.** This project is proprietary. You are strictly prohibited from copying, downloading, modifying, or using this source code for any personal or commercial purposes without explicit permission from the developer.
+
+---
+
+## ✨ Key Features
+
+- 🎥 **High-Quality Downloads:** Fetch videos flawlessly in both HD and SD resolutions.
+- 💅 **Modern UI/UX:** Stunning glassmorphism dark mode with sleek animations and a fully responsive design.
+- ⚡ **Lightning Fast:** Optimized backend processing and quick video extraction.
+- 🔒 **Privacy First:** Download public videos seamlessly—no login or personal details required!
+
+## 💻 Tech Stack
+
+- **Frontend:** HTML5, CSS3 (Modern Glassmorphism), Vanilla JavaScript
+- **Backend:** Node.js, Express, Axios
+- **Deployment:** Render
+
+## 👨‍💻 Developed By
+
+**GridX Dev Studio**
+- 🌐 [GitHub Profile](https://github.com/yourusername)
+
+---
+
+## 📄 Legal & Disclaimer
+
+> **Disclaimer:** This tool is strictly intended for educational purposes and personal use. Downloading copyrighted material without the creator's explicit permission violates Facebook's Terms of Service. The developer assumes no responsibility or liability for any misuse of this application by end users.
+
