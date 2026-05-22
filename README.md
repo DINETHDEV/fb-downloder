@@ -4,7 +4,7 @@ A simple, user-friendly web tool to download Facebook videos effortlessly.
 
 ## 📋 Overview
 
-Developed by Omindu Dissanayake and Pasindu Maduwantha, the Facebook Video Downloader allows users to save Facebook videos with just a few clicks. By simply entering a Facebook video URL, users can instantly access download links for videos in various quality options.
+Developed by GridX Dev 7, the Facebook Video Downloader allows users to save Facebook videos with just a few clicks. By simply entering a Facebook video URL, users can instantly access download links for videos in various quality options.
 
 ## ✨ Key Features
 
@@ -30,8 +30,8 @@ Developed by Omindu Dissanayake and Pasindu Maduwantha, the Facebook Video Downl
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/OminduDissanayaka/facebook-video-downloader.git
-   cd facebook-video-downloader
+   git clone https://github.com/DINETHDEV/fb-downloder.git
+   cd fb-downloder
    ```
 
 2. Install dependencies:
@@ -75,6 +75,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Thanks to all contributors who participate in this project
 - Special thanks to the open-source community for their valuable resources
+- Original concept by Omindu Dissanayake and Pasindu Maduwantha
 
 ## ⚠️ Disclaimer
 
@@ -82,9 +83,8 @@ This tool is designed for personal use only. Please respect copyright laws and t
 
 ## 📞 Contact
 
-- Omindu Dissanayake - [GitHub]([https://github.com/omindu](https://github.com/OminduDissanayaka))
-- Pasindu Maduwantha - [GitHub]([https://github.com/pasindu](https://github.com/PasinduOG))
+- GridX Dev 7 - [GitHub](https://github.com/DINETHDEV)
 
 ---
 
-Made with ❤️ by Omindu Dissanayake and Pasindu Maduwantha
+Made with ❤️ by GridX Dev 7
