@@ -93,12 +93,17 @@ app.get('/fbdown', async (req, res) => {
       const result = await fetchViaScraper(url);
       return res.json(result);
     } catch (scrapeErr) {
+      const msg = scrapeErr.response?.status === 404
+        ? 'Video not found or inaccessible (404). Make sure the URL is correct and the video is public.'
+        : scrapeErr.message.includes('login')
+          ? 'Facebook now requires login to access videos.'
+          : scrapeErr.message;
       console.error('Both methods failed');
       console.error('  yt-dlp:', ytErr.message);
       console.error('  scraper:', scrapeErr.message);
       res.status(500).json({
         error: 'Failed to fetch video details.',
-        details: 'Facebook video downloading requires login. ' + scrapeErr.message,
+        details: msg,
         help: getCookieHelp()
       });
     }
@@ -116,8 +121,11 @@ app.get('/download', async (req, res) => {
     res.setHeader('Content-Type', 'video/mp4');
     response.data.pipe(res);
   } catch (error) {
-    console.error('Download error:', error.message);
-    res.status(500).json({ error: 'Failed to download video', details: error.message });
+    const msg = error.response?.status === 404
+      ? 'Video URL expired or not found. Try fetching video info again.'
+      : error.message;
+    console.error('Download error:', msg);
+    res.status(500).json({ error: 'Failed to download video', details: msg });
   }
 });
 
